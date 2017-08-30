@@ -28,3 +28,14 @@ UberData <- read.csv("Uber Request Data.csv")
   sum(is.na(UberData$Request.id)) #No missing values
   sum(is.na(UberData$Pickup.point)) #No missing values
 
+  # Completed Trips should have Both Pickup and Drop Time stamps and Driver ID
+  CompletedTrips <- UberData[which(UberData$Status == "Trip Completed"),]
+  sum(is.na(CompletedTrips$Drop.timestamp)) #All Timestamps present
+  sum(is.na(CompletedTrips$Driver.id)) #All Timestamps present
+  
+  # Cancelled Trips should have Pickup Time stamps and Driver ID
+  CancelledTrips <- UberData[which(UberData$Status == "Cancelled"),]
+  sum(is.na(CancelledTrips$Request.timestamp)) #All Timestamps present
+  sum(is.na(CancelledTrips$Driver.id)) #All Timestamps present
+
+
