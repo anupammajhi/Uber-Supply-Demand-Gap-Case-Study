@@ -39,3 +39,11 @@ UberData <- read.csv("Uber Request Data.csv")
   sum(is.na(CancelledTrips$Driver.id)) #All Timestamps present
 
 
+# COLUMN Request.id : OK
+# COLUMN Pickup.point : OK. 2 unambiguous levels. No issues. Not required to lowercase.
+# COLUMN Driver.id : OK
+# COLUMN Status : OK. 3 Unambiguous levels. No issues. Not required to lowercase.
+# COLUMN Request.timestamp and Drop.timestamp
+    # Should be a date vector
+  
+
