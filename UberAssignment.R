@@ -27,3 +27,4 @@ UberData <- read.csv("Uber Request Data.csv")
   # Request.id and Pickup.point should not have any missing Values
   sum(is.na(UberData$Request.id)) #No missing values
   sum(is.na(UberData$Pickup.point)) #No missing values
+
