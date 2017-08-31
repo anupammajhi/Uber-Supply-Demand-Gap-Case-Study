@@ -90,3 +90,4 @@ UberData <- read.csv("Uber Request Data.csv")
     # Update POSIXct values to new column, hence standardising Date Time
     UberData$POSIXDropTime[slashDates_Drop] <- as.POSIXct(UberData$Drop.timestamp[slashDates_Drop],format = '%d/%m/%Y %H:%M')
     UberData$POSIXDropTime[hyphenDates_Drop] <- as.POSIXct(UberData$Drop.timestamp[hyphenDates_Drop],format = '%d-%m-%Y %H:%M:%S')
+    
