@@ -70,3 +70,4 @@ UberData <- read.csv("Uber Request Data.csv")
     
     #Check for any missing values
     which(is.na(UberData$POSIXRequestTime)) #No missing Values
+    
