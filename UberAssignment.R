@@ -80,3 +80,4 @@ UberData <- read.csv("Uber Request Data.csv")
     
     # Identifying rows with Date format %d-%m-%Y %H:%M:%S using regex
     hyphenDates_Drop <- grep(pattern = '^[0-9]{1,2}-[0-9]{1,2}-[0-9]{4} [0-9]{1,2}:[0-9]{1,2}:[0-9]{1,2}$',x=UberData$Drop.timestamp)
+    
