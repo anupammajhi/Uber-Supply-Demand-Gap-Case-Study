@@ -60,3 +60,13 @@ UberData <- read.csv("Uber Request Data.csv")
     
     # Check for missed format by taking count of identified patterns in previous step and compare with dataset
     length(slashDates_Request) + length(hyphenDates_Request) == length(UberData$Request.timestamp) #TRUE , Hence No other date formats
+  
+    # New POSIXct column named POSIXRequestTime
+    UberData$POSIXRequestTime <- as.POSIXct(NA)
+    
+    # Update POSIXct values to new column, hence standardising Date Time using respective identified format
+    UberData$POSIXRequestTime[slashDates_Request] <- as.POSIXct(UberData$Request.timestamp[slashDates_Request],format = '%d/%m/%Y %H:%M')
+    UberData$POSIXRequestTime[hyphenDates_Request] <- as.POSIXct(UberData$Request.timestamp[hyphenDates_Request],format = '%d-%m-%Y %H:%M:%S')
+    
+    #Check for any missing values
+    which(is.na(UberData$POSIXRequestTime)) #No missing Values
