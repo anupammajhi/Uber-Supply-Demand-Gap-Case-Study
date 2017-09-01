@@ -112,3 +112,14 @@ UberData <- read.csv("Uber Request Data.csv")
         return('Early Evening')
       }else if(x %in% c(18,19,20)){
         return('Late Evening')
+      }else if(x %in% c(21,22,23)){
+        return('Night')
+      }else if(x %in% c(0,1,2,3)){
+        return('Late Night')
+      }else{
+        return(NA)
+      }
+    })
+    
+    # Ordering the factor levels
+    UberData$PartOfDay = factor(UberData$PartOfDay,levels = c('Early Morning','Morning','Late Morning','Afternoon','Early Evening','Late Evening','Night','Late Night'))
