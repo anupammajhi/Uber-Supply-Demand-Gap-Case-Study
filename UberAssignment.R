@@ -103,3 +103,12 @@ UberData <- read.csv("Uber Request Data.csv")
       if(x %in% c(4,5,6)){
         return('Early Morning')
       }else if(x %in% c(7,8,9)){
+        return('Morning')
+      }else if(x %in% c(10,11)){
+        return('Late Morning')
+      }else if(x %in% c(12,13,14)){
+        return('Afternoon')
+      }else if(x %in% c(15,16,17)){
+        return('Early Evening')
+      }else if(x %in% c(18,19,20)){
+        return('Late Evening')
