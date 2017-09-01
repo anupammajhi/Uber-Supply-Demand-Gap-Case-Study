@@ -123,3 +123,4 @@ UberData <- read.csv("Uber Request Data.csv")
     
     # Ordering the factor levels
     UberData$PartOfDay = factor(UberData$PartOfDay,levels = c('Early Morning','Morning','Late Morning','Afternoon','Early Evening','Late Evening','Night','Late Night'))
+    
