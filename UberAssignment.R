@@ -92,3 +92,4 @@ UberData <- read.csv("Uber Request Data.csv")
     UberData$POSIXDropTime[hyphenDates_Drop] <- as.POSIXct(UberData$Drop.timestamp[hyphenDates_Drop],format = '%d-%m-%Y %H:%M:%S')
     
     # Removing unwanted Columns Request.timestamp and Drop.timestamp as new columns created with POSIXct
+    UberData <- UberData[,c(1:4,7:8)]
