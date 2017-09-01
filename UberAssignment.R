@@ -133,3 +133,4 @@ UberData <- read.csv("Uber Request Data.csv")
     
   #------ .. Univariate Analysis ------
     # Request.iD : It is unique identifier for each request
+    # Pickup.point : Categorical variable (Airport, City)
