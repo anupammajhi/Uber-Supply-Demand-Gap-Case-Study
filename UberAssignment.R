@@ -144,3 +144,14 @@ UberData <- read.csv("Uber Request Data.csv")
         labs(x = "Pickup Point", 
              y="Number of Requests", 
              title = "Overall Demand from Airport and City") +
+        geom_text(aes(y=(..count..),
+                  label=(..count..)),
+                  stat='count',
+                  vjust = -0.3,
+                  size = 5)
+      #Explanation : bar chart is used, labs has been used to change graph labels, geom_text for adding text to graph with 
+      # vjust for adjusting text position, ..count.. identity to specify that the frequency itself is used and size for text size
+        
+      #VERDICT : There are equivalent numbers of requests both to and from airport
+    
+    # Driver.id : Unique driver id. Can serve as Categorical variable
