@@ -155,3 +155,14 @@ UberData <- read.csv("Uber Request Data.csv")
       #VERDICT : There are equivalent numbers of requests both to and from airport
     
     # Driver.id : Unique driver id. Can serve as Categorical variable
+    # Status : Categorical Variable ("Cancelled","No Cars Available","Trip Completed")
+      # Frequency of Responses/Status to Requests
+      summary(UberData$Status)
+      
+      # Pot for above
+      # Bar chart is optimal to observe the frequency
+      ggplot(UberData,aes(x=Status, 
+             fill = Status)) + 
+        geom_bar() + 
+        scale_fill_manual(values = c('#b81313','#b81313','#6dc14b')) +
+        geom_text(aes(y = (..count..), 
