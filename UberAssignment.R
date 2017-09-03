@@ -167,3 +167,4 @@ UberData <- read.csv("Uber Request Data.csv")
         scale_fill_manual(values = c('#b81313','#b81313','#6dc14b')) +
         geom_text(aes(y = (..count..), 
                   label = scales::percent((..count..)/sum(..count..))),
+                  stat = 'count', 
