@@ -170,3 +170,4 @@ UberData <- read.csv("Uber Request Data.csv")
                   stat = 'count', 
                   vjust = -0.4,
                   size = 5) +
+        labs(x = 'Status',
