@@ -169,3 +169,4 @@ UberData <- read.csv("Uber Request Data.csv")
                   label = scales::percent((..count..)/sum(..count..))),
                   stat = 'count', 
                   vjust = -0.4,
+                  size = 5) +
