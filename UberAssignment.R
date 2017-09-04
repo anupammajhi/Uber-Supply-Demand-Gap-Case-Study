@@ -176,3 +176,12 @@ UberData <- read.csv("Uber Request Data.csv")
       #Explanation : bar chart is used, labs has been used to change graph labels, geom_text for adding text to graph with 
       # vjust for adjusting text position, ..count.. identity to specify that the frequency itself is used and size for text size
       # scale_fill_manual used to cange colors of bars with hex code
+      
+      #VERDICT : There is a significant difference in Demand and Supply. Only 42% customer requests are successfully served
+      
+    # POSIXRequestTime : Ordered Categorical
+      summary(as.factor(format(UberData$POSIXRequestTime,'%a'))) 
+      #Number of requests based on Week Day is almost equivalent
+      
+    # POSIXDropTime : Ordered Categorical
+      summary(as.factor(format(UberData[which(UberData$Status == 'Trip Completed'),c("POSIXDropTime")],'%a'))) 
