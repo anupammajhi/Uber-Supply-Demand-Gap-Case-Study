@@ -173,3 +173,4 @@ UberData <- read.csv("Uber Request Data.csv")
         labs(x = 'Status',
              y='Number of Requests', 
              title='Overall Response to Demand')
+      #Explanation : bar chart is used, labs has been used to change graph labels, geom_text for adding text to graph with 
