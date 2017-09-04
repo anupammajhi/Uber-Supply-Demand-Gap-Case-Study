@@ -186,3 +186,13 @@ UberData <- read.csv("Uber Request Data.csv")
     # POSIXDropTime : Ordered Categorical
       summary(as.factor(format(UberData[which(UberData$Status == 'Trip Completed'),c("POSIXDropTime")],'%a'))) 
       #Number of drops are also equivalent. The difference in data is because of midnight drops
+      
+    # HourOfTheDay : Ordered Categorical
+      summary(UberData$HourOfTheDay)
+      
+      #Plot for above
+      # Bar chart is optimal to observe the frequency with color
+      ggplot(UberData,aes(x=HourOfTheDay, fill = ..count..)) + 
+        geom_bar() + 
+        scale_fill_gradient(low = '#b81313', high = 'green', space = 'lab') +
+        geom_text(aes(y=(..count..),
