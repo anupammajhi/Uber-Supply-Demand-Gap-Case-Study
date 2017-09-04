@@ -196,3 +196,11 @@ UberData <- read.csv("Uber Request Data.csv")
         geom_bar() + 
         scale_fill_gradient(low = '#b81313', high = 'green', space = 'lab') +
         geom_text(aes(y=(..count..),
+                      label=(..count..)),
+                  stat='count',
+                  angle=90,
+                  hjust = -0.2)+
+        labs(x = "Hour of The Day",
+             y="Number of Requests", 
+             fill = 'No. of Requests',
+             title='Overall Demand Throughout The Day')+
