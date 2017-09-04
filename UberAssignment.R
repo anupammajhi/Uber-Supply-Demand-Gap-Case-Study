@@ -172,3 +172,4 @@ UberData <- read.csv("Uber Request Data.csv")
                   size = 5) +
         labs(x = 'Status',
              y='Number of Requests', 
+             title='Overall Response to Demand')
