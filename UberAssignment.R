@@ -185,3 +185,4 @@ UberData <- read.csv("Uber Request Data.csv")
       
     # POSIXDropTime : Ordered Categorical
       summary(as.factor(format(UberData[which(UberData$Status == 'Trip Completed'),c("POSIXDropTime")],'%a'))) 
+      #Number of drops are also equivalent. The difference in data is because of midnight drops
