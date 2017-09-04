@@ -204,3 +204,4 @@ UberData <- read.csv("Uber Request Data.csv")
              y="Number of Requests", 
              fill = 'No. of Requests',
              title='Overall Demand Throughout The Day')+
+        coord_cartesian(ylim = c(0,600))
