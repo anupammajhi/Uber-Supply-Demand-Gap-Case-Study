@@ -216,3 +216,11 @@ UberData <- read.csv("Uber Request Data.csv")
       # Multiple Bar charts to observe and compare the frequency
       ggplot(UberData,aes(x=HourOfTheDay, fill = ..count..)) + 
         geom_bar() + 
+        scale_fill_gradient(low = '#b81313', high = 'green', space = 'lab') +
+        geom_text(aes(y=(..count..),
+                  label=(..count..)),
+                  stat='count',
+                  vjust = -0.2,
+                  size = 3)+
+        labs(x = "Hour of The Day",
+             y="Number of Requests", 
