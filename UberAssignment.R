@@ -236,3 +236,15 @@ UberData <- read.csv("Uber Request Data.csv")
       
     # PartOfDay : Ordered Categorical
       summary(UberData$PartOfDay)
+      
+      #Plot to find the frequency of requests based on location/Pickup point
+      # Bar chart is optimal to observe the frequency and comparision
+      ggplot(UberData,aes(x=PartOfDay, fill = ..count..)) + 
+        geom_bar() + 
+        geom_text(aes(y=(..count..),
+                  label=(..count..)),
+                  stat='count',
+                  vjust = -0.4,
+                  size=4.7) +
+        scale_fill_gradient(low = '#b81313', high = 'green', space = 'lab')+
+        labs(x = "Part of The Day",
