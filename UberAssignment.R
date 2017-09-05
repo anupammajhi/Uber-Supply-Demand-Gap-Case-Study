@@ -224,3 +224,15 @@ UberData <- read.csv("Uber Request Data.csv")
                   size = 3)+
         labs(x = "Hour of The Day",
              y="Number of Requests", 
+             fill = 'No. of Requests',
+             title='Daily Demand Throughout The Day')+
+        coord_cartesian(ylim = c(0,120))+
+        facet_grid(format(POSIXRequestTime,"%d-%b")~.)
+      
+      #Explanation : used facet to above graph to check consistency of demand
+      
+      #Verdict : There is a similar demand everyday at similar timings
+      
+      
+    # PartOfDay : Ordered Categorical
+      summary(UberData$PartOfDay)
