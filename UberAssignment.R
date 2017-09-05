@@ -205,3 +205,14 @@ UberData <- read.csv("Uber Request Data.csv")
              fill = 'No. of Requests',
              title='Overall Demand Throughout The Day')+
         coord_cartesian(ylim = c(0,600))
+      
+      #Explanation : bar chart is used, labs has been used to change graph labels, geom_text for adding text to graph with 
+      # vjust for adjusting text position, ..count.. identity to specify that the frequency itself is used and size for text size
+      # scale_fill_manual used to cange colors of bars with hex code
+      
+      #Verdict : There is a high demand 5am to 9am and also 5pm to 9pm
+      
+      #Plot for demand based on time as well as day
+      # Multiple Bar charts to observe and compare the frequency
+      ggplot(UberData,aes(x=HourOfTheDay, fill = ..count..)) + 
+        geom_bar() + 
