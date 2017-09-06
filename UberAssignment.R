@@ -256,3 +256,15 @@ UberData <- read.csv("Uber Request Data.csv")
         coord_cartesian(ylim = c(0,1300))
      
       #Explanation : bar chart is used, labs has been used to change graph labels, geom_text for adding text to graph with 
+      # vjust for adjusting text position, ..count.. identity to specify that the frequency itself is used and size for text size
+      # scale_fill_manual used to cange colors of bars with hex code 
+      # used facet to check demand based on Pickup Location
+      
+      #Verdict : There is a high demand for cabs from City to Airport in the Early Morning and Morning hours
+      #           There is a high demand for cabs from Airport to City in the Late Evening
+      #           However the vice versa is not true
+      #           This shows that there are more outbound flights in the Mornings and inbound flights in the evening
+      #           Rest of the times there is quite less demand to and from Airport
+      
+      
+  
