@@ -278,3 +278,13 @@ UberData <- read.csv("Uber Request Data.csv")
       
       UberData[,c('Pickup.point','Status')] %>%
         group_by(Pickup.point,Status) %>%
+        summarise(Status.Count = length(Status))
+          
+      
+      ggplot(UberData,aes(x = Status, fill = Status)) +
+        geom_bar() +
+        scale_fill_manual(values = c('#b81313','#400808','#6dc14b')) +
+        labs(x = "Status", 
+             y = "Number of Requests", 
+             title = 'Overall Supply to Demand', 
+             subtitle = 'Based on Status of Request and Location')+
