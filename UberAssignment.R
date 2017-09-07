@@ -268,3 +268,13 @@ UberData <- read.csv("Uber Request Data.csv")
       
       
   
+      
+      
+  #------ .. Segmented Univariate Analysis ------
+      
+      
+      
+    # Analysis of Status based on Request Location
+      
+      UberData[,c('Pickup.point','Status')] %>%
+        group_by(Pickup.point,Status) %>%
