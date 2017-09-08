@@ -288,3 +288,4 @@ UberData <- read.csv("Uber Request Data.csv")
              y = "Number of Requests", 
              title = 'Overall Supply to Demand', 
              subtitle = 'Based on Status of Request and Location')+
+        geom_text(data = UberData[UberData$Pickup.point == 'Airport',],
