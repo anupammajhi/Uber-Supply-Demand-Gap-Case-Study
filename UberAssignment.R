@@ -326,3 +326,4 @@ UberData <- read.csv("Uber Request Data.csv")
         group_by(Pickup.point,HourOfTheDay,Status) %>%
         summarise(Status.Count = length(Status)) %>%
       ggplot(aes(x=HourOfTheDay)) +
+        geom_bar(aes(y=Status.Count,color = 'Total Demand'),
