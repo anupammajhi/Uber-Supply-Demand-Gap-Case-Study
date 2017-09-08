@@ -316,3 +316,13 @@ UberData <- read.csv("Uber Request Data.csv")
         
     # Analyzing Status of requests from both locations at differents timings
       
+      UberData %>%
+        group_by(Pickup.point,HourOfTheDay,Status) %>%
+        summarise(Status.Count = length(Status))
+      
+      #Plot to analyze demand and supply based on pickup point and Time of request
+      # Multiple juxtaposed Bar chart is optimal to observe the frequency and copmarision
+      UberData %>%
+        group_by(Pickup.point,HourOfTheDay,Status) %>%
+        summarise(Status.Count = length(Status)) %>%
+      ggplot(aes(x=HourOfTheDay)) +
