@@ -353,3 +353,4 @@ UberData <- read.csv("Uber Request Data.csv")
         group_by(Pickup.point,PartOfDay,Status) %>%
         summarise(Status.Count = length(Status))
       
+      #Plot to analyze demand and supply based on pickup point and TimeSlot of request
