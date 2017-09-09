@@ -354,3 +354,11 @@ UberData <- read.csv("Uber Request Data.csv")
         summarise(Status.Count = length(Status))
       
       #Plot to analyze demand and supply based on pickup point and TimeSlot of request
+      # Multiple juxtaposed Bar chart is optimal to observe the frequency and copmarision
+      UberData %>%
+        group_by(Pickup.point,PartOfDay,Status) %>%
+        summarise(Status.Count = length(Status)) %>%
+        ggplot(aes(x=PartOfDay,fill = Status)) +
+        geom_bar(aes(y=Status.Count, color = "Total Demand"),
+                 stat = 'identity', 
+                 fill ='grey') +
