@@ -395,3 +395,11 @@ UberData <- read.csv("Uber Request Data.csv")
       UberData[which(UberData$Status == 'No Cars Available' & UberData$Pickup.point == 'Airport'),] %>%
         group_by(HourOfTheDay,RequestDate = format(POSIXRequestTime,'%d-%b')) %>%
         summarise(Status.Count = length(Status)) %>%
+      ggplot(aes(x=HourOfTheDay,y=RequestDate,fill=Status.Count))+
+        geom_tile()+
+        scale_fill_gradient(low="green", high="red") +
+        labs(x="Hour Of The Day",
+             y="Date",
+             title = "Time-Series Heatmap - No Cars Available at Airport", 
+             fill="Frequency")
+  
