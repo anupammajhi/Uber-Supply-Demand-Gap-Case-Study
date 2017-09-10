@@ -394,3 +394,4 @@ UberData <- read.csv("Uber Request Data.csv")
       
       UberData[which(UberData$Status == 'No Cars Available' & UberData$Pickup.point == 'Airport'),] %>%
         group_by(HourOfTheDay,RequestDate = format(POSIXRequestTime,'%d-%b')) %>%
+        summarise(Status.Count = length(Status)) %>%
