@@ -374,3 +374,13 @@ UberData <- read.csv("Uber Request Data.csv")
              title='Demand and Supply Gap', 
              subtitle='Based On Time Slot') +
         theme(axis.text.x = element_text(angle = 90, hjust = 1))
+      
+      #Explanation : bar chart is used, labs has been used to change graph labels,
+      # Text not used to keep it clean and simple and to find obvious inferences
+      # Facet grid is used to seperate the graphs based on pickup point
+      # scale_fill_manual used to cange colors of bars with hex code
+      # theme is used to adjust the size of facet grid text
+      #labs used to rename labels
+      # Here two bar graphs are extrapolated t show the demand (in grey) and supply (in colors)
+      
+      #Verdict : For ABOVE TWO GRAPHS, Based on Time we can see In the Morning Hours there is a huge demand for cabs to airport, 
