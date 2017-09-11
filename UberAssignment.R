@@ -405,3 +405,4 @@ UberData <- read.csv("Uber Request Data.csv")
   
       
       UberData[which(UberData$Status == 'Cancelled' & UberData$Pickup.point == 'City'),] %>%
+        group_by(HourOfTheDay,RequestDate = format(POSIXRequestTime,'%d-%b')) %>%
