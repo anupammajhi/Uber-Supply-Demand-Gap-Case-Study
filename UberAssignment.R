@@ -404,3 +404,4 @@ UberData <- read.csv("Uber Request Data.csv")
              fill="Frequency")
   
       
+      UberData[which(UberData$Status == 'Cancelled' & UberData$Pickup.point == 'City'),] %>%
