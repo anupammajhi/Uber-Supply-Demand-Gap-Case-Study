@@ -427,3 +427,4 @@ UberData <- read.csv("Uber Request Data.csv")
 # ------ Few Generic Inferences ------
           
       # Average Travel Time
+      summarise(UberData, travelTime = mean(POSIXDropTime - POSIXRequestTime,na.rm = T))
