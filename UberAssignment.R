@@ -415,3 +415,14 @@ UberData <- read.csv("Uber Request Data.csv")
              title = "Time-Series Heatmap - Trips Cancelled from City", 
              fill="Frequency")
       
+      #Explanation : For above two graphs tile (heat map) is used to confirm the hypothesis of status irrespective of day, 
+      # labs has been used to change graph labels,
+      # Text not used to keep it clean and simple and to find obvious inferences
+      # scale_fill_gradient used to change colors of tiles
+      #labs used to rename labels
+      
+      #Verdict : For ABOVE TWO GRAPHS, Based on Time and Day we can see that irrespective of which day, the response to demand is same.
+      #          Hence further confirming the hypothesis
+      
+# ------ Few Generic Inferences ------
+          
