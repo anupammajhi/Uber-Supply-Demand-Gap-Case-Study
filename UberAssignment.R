@@ -428,3 +428,14 @@ UberData <- read.csv("Uber Request Data.csv")
           
       # Average Travel Time
       summarise(UberData, travelTime = mean(POSIXDropTime - POSIXRequestTime,na.rm = T))
+      
+      # Average Non-Availability of Cars
+      UberData[which(UberData$Status == 'No Cars Available'),] %>%
+        group_by(HourOfTheDay) %>%
+        summarise(NonAvailability = length(HourOfTheDay)) %>%
+        summarise(Average_Non_Availabilty = mean(NonAvailability))
+      
+      #From Airport
+      UberData[which(UberData$Status == 'No Cars Available' & UberData$Pickup.point == 'Airport'),] %>%
+        group_by(HourOfTheDay) %>%
+        summarise(NonAvailability = length(HourOfTheDay)) %>%
