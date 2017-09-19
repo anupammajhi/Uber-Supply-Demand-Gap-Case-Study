@@ -9,6 +9,3 @@ This data set is a **masked data set** which is similar to what data analysts at
 ## Business Understanding
 
 You may have some experience of travelling to and from the airport. Have you ever used Uber or any other cab service for this travel? Did you at any time face the problem of cancellation by the driver or non-availability of cars?
-
- 
-
