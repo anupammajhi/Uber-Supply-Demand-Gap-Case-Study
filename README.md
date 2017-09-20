@@ -40,6 +40,3 @@ There are six attributes associated with each request made by a customer:
 6. Status of the request: The final status of the trip, that can be either completed, cancelled by the driver or no cars available
 
  
-
-
-
