@@ -40,3 +40,20 @@ There are six attributes associated with each request made by a customer:
 6. Status of the request: The final status of the trip, that can be either completed, cancelled by the driver or no cars available
 
  
+
+
+
+Note: For this assignment, only the trips **to and from the airport** are being considered.
+
+ 
+
+**Data Cleaning and Preparation - Hints**
+
+1. Identify the data quality issues and clean the data so that you can use it for analysis.
+2. Ensure that the dates and time are in the proper format. Derive new variables which will be useful for analysis.
+
+ 
+
+## Results Expected
+
+1. Visually identify the most pressing problems for Uber. 
