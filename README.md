@@ -55,5 +55,3 @@ Note: For this assignment, only the trips **to and from the airport** are being 
  
 
 ## Results Expected
-
-1. Visually identify the most pressing problems for Uber. 
